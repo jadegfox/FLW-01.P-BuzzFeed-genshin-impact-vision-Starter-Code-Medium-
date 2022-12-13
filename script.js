@@ -6,7 +6,7 @@ function buzzfeedQuiz() {
   // task 4: declare variables for the html elements you'll use as selectors later. You need the submit button, display div, and all three inputs for your questions.
 
   let button = document.querySelector(".submit");
-  let displayResult = document.querySelector(".displayResult");
+  let displayResult= document.querySelector(".displayResult");
   let q1 = document.querySelector(".q1");
   let q2 = document.querySelector(".q2");
   let q3 = document.querySelector(".q3");
@@ -53,23 +53,31 @@ if (options2 === "Dragon Ball Z"){
 }else if(options2 === "Bleach"){   
   q2Score = 2;
 } else if(options2 ==="My Hero Academia"){ 
+  q2Score = 1;
 }
 
     // task 9: create a conditional statement for the responses to Question 3 based on the user input.
-if (options3 === "I don’t play the game"){
-} else if(options3 === "1-3 hours"){
-}else if(options3 === "4-6 hours"){  
+if (options3 === "I don’t play the game"){ 
+  q3Score = 4
+} else if(options3 === "1-3 hours"){ 
+    q3Score = 3
+}else if(options3 === "4-6 hours"){ 
+    q3Score = 2
 } else if(options3 ==="4-8 hours"){ 
+   q3Score = 1
 }
 
 
     // task 10: declare a variable for the total score of the quiz and set it equal to the sum of each question score.
-let totalQuiz =
+let totalQuiz = q3Score + q2Score + q1Score;
 
 
 
     // task 11: create a conditional statement for the result to the quiz based on the total score. Using string interpolation, display these to the page: the result, an image that corresponds and a message to go with it.
-
+ if(totalQuiz > 1 &&totalQuiz < 5){
+   displayResult.innerHTML = ""; 
+ let waterImg = document.createElement("img");
+ }
 
 
   };
