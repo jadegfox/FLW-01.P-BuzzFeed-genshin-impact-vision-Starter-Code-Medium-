@@ -75,8 +75,9 @@ let totalQuiz = q3Score + q2Score + q1Score;
 
     // task 11: create a conditional statement for the result to the quiz based on the total score. Using string interpolation, display these to the page: the result, an image that corresponds and a message to go with it.
  if(totalQuiz > 1 &&totalQuiz < 5){
-   displayResult.innerHTML = ""; 
- let waterImg = document.createElement("img");
+   displayResult.innerHTML = "your " ; 
+ let waterImg = document.createElement("img"); 
+   waterImg.src= "https://ih1.redbubble.net/image.1937324613.2520/st,small,507x507-pad,600x600,f8f8f8.jpg"
  }
 
 
